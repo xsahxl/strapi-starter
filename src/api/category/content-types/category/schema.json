@@ -16,17 +16,11 @@
       "required": true,
       "unique": true
     },
-    "categories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::category.category",
-      "inversedBy": "restaurants"
-    },
     "restaurants": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::category.category",
-      "mappedBy": "categories"
+      "target": "api::restaurant.restaurant",
+      "inversedBy": "categories"
     }
   }
 }
